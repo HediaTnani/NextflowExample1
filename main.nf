@@ -9,8 +9,6 @@ nextflow.enable.dsl=2
  */
 
 params.outdir = "$launchDir/outdir/"
-params.rscriptpath1 = "$launchDir/rscript1.R"
-params.rscriptpath2 = "$launchDir/rscript2.R"
 params.myobjval1 = "abcd"
 params.myobjval2 = "efgh"
 
@@ -43,7 +41,7 @@ process process1 {
 
     script:
     """
-    Rscript $params.rscriptpath1 -o $params.myobjval1
+    Rscript $launchDir/rscript1.R -o $params.myobjval1
     """
 }
 
@@ -59,6 +57,6 @@ process process2 {
 
     script:
     """
-    Rscript $params.rscriptpath2 -r $obj1readpath -o $myobjval2
+    Rscript $launchDir/rscript2.R -r $obj1readpath -o $myobjval2
     """
 }
