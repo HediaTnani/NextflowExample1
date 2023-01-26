@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+
+install.packages("argparse", dep=T)
 # manage parser
 suppressPackageStartupMessages(library("argparse"))
 parser <- ArgumentParser() # create parser object
