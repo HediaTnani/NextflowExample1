@@ -41,7 +41,7 @@ process process1 {
 
     script:
     """
-    Rscript --vanilla $launchDir/rscript1.R -o $params.myobjval1
+    Rscript --vanilla $launchDir/bin/rscript1.R -o $params.myobjval1
     """
 }
 
@@ -57,6 +57,6 @@ process process2 {
 
     script:
     """
-    Rscript --vanilla $launchDir/rscript2.R -r $obj1readpath -o $myobjval2
+    Rscript --vanilla $launchDir/bin/rscript2.R -r $obj1readpath -o $myobjval2
     """
 }
