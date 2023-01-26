@@ -29,17 +29,9 @@ jobs:
           java-version: ${{ matrix.java_version }}
           architecture: x64
           
-      - name: Install Python
-        uses: actions/setup-python@v4
-        with:
-         python-version: '3.10'  
-          
-      - name: Install Pandoc
-        run: sudo apt install pandoc
-
-      - name: Nextflow run
+      - name: Nextflow run ex1.nf
         run: |
           curl -fsSL get.nextflow.io | bash
-          ./nextflow run . -with-docker r-base:4.2.2
+          ./nextflow run . 
         env:
           NXF_ANSI_LOG: false
