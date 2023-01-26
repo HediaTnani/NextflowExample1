@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-install.packages("argparse", dep=T)
+install.packages("argparse", repos="http://cran.us.r-project.org")
 
 # manage parser
 suppressPackageStartupMessages(library("argparse"))
