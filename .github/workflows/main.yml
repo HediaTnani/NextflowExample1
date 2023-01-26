@@ -32,6 +32,6 @@ jobs:
       - name: Nextflow run
         run: |
           curl -fsSL get.nextflow.io | bash
-          ./nextflow run .
+          ./nextflow run main.nf -with-docker r-base:4.2.2
         env:
           NXF_ANSI_LOG: false
