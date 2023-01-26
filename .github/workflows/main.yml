@@ -29,7 +29,7 @@ jobs:
           java-version: ${{ matrix.java_version }}
           architecture: x64
           
-      - name: Nextflow run ex1.nf
+      - name: Nextflow run ex1
         run: |
           curl -fsSL get.nextflow.io | bash
           ./nextflow run . 
