@@ -28,6 +28,9 @@ jobs:
         with:
           java-version: ${{ matrix.java_version }}
           architecture: x64
+          
+      - name: Install Pandoc
+        run: sudo apt install pandoc
 
       - name: Nextflow run
         run: |
