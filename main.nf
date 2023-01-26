@@ -13,7 +13,7 @@ params.rscriptpath1 = "$launchDir/rscript1.R"
 params.rscriptpath2 = "$launchDir/rscript2.R"
 params.myobjval1 = "abcd"
 params.myobjval2 = "efgh"
-params.CONTAINER = "r-base:4.2.2"
+
 
 workflow {
     myobjval1 = channel.of( params.myobjval1 )
@@ -33,7 +33,6 @@ workflow {
 }
 
 process process1 {
-    container params.CONTAINER
     publishDir("$params.outdir", overwrite: true)
 
     input: 
@@ -49,7 +48,6 @@ process process1 {
 }
 
 process process2 {
-    container params.CONTAINER
     publishDir("$params.outdir", overwrite: true)
 
     input:
